@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+.content {
+    background: radial-gradient(circle at 55% 60%,rgba(65,112,226,1), rgba(65,112,226,0) 50%), 
+                radial-gradient(circle at 10% 10%,rgba(160,114,243,1), rgba(160,114,243,0) 50%), 
+                radial-gradient(circle at 90% 10%,rgba(184,150,255,0.53), rgba(184,150,255,0) 50%), 
+                radial-gradient(circle at 90% 90%,rgba(177,86,210,1), rgba(177,86,210,0) 50%), 
+                radial-gradient(circle at 10% 90%,rgba(25,14,255,1), rgba(25,14,255,0) 50%) ;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 2rem;
+
+    @media screen and (min-width: 1440px) {
+        padding: 2rem 4rem;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+    align-items: center;
+}
+
+.active {
+    display: flex;
+}
+
+.title__text {
+    font-size: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.gallery__image {
+    width: auto;
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+    flex: 1 1 auto;
+
+    @media screen and (min-width: 1400px) {
+        max-width: 50vw;;
+    }
+}
+
+.gallery__image:hover {
+    box-shadow: 1px 1px 10px #fff;
+    transition: .3s;
+}
+
+.modal {
+    width: 50vw;
+    height: 90%;
+    padding: 1rem 3rem;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @media screen and (max-width: 426px) {
+        width: 100%;
+    }
+}
+
+.modal__close {
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls__btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.controls__btn:disabled .controls__img {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.controls__img {
+    color: #fff;
+}
+
+.controls__btn--left {
+    left: 0;
+}
+
+.controls__btn--right {
+    right: 0;
+}
