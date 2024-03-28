@@ -68,6 +68,10 @@ body {
     cursor: pointer;
     flex: 1 1 auto;
 
+    @media screen and (max-width: 426px) {
+        height: auto;
+    }
+
     @media screen and (min-width: 1400px) {
         max-width: 50vw;;
     }
@@ -90,6 +94,7 @@ body {
 
     @media screen and (max-width: 426px) {
         width: 100%;
+        height: auto;
     }
 }
 
