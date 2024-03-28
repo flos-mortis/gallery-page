@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var galleryImages = document.querySelectorAll('.gallery__image');
     var modalWindow = document.querySelector('.overlay');
     var modalImage = document.querySelector('.carousel__image');
-    var closeBtn = document.querySelector('.modal__close');
     var nextBtn = document.querySelector('.controls__btn--right');
     var prevBtn = document.querySelector('.controls__btn--left');
     var imageIdx = 0;
@@ -17,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     // Обработка закрытия модального окна
     document.addEventListener('click', function (event) {
-        if (event.target === modalWindow || event.target === closeBtn) {
+        if (event.target === modalWindow) {
             closeModal();
         }
     });

@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryImages : NodeListOf<HTMLImageElement> = document.querySelectorAll('.gallery__image');
     const modalWindow : HTMLDivElement = document.querySelector('.overlay')!;
     const modalImage : HTMLImageElement = document.querySelector('.carousel__image')!;
-    const closeBtn : HTMLSpanElement = document.querySelector('.modal__close')!;
     const nextBtn : HTMLButtonElement = document.querySelector('.controls__btn--right')!;
     const prevBtn : HTMLButtonElement = document.querySelector('.controls__btn--left')!;
 
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Обработка закрытия модального окна
     document.addEventListener('click' , event => {
-        if (event.target === modalWindow || event.target === closeBtn) {
+        if (event.target === modalWindow) {
             closeModal();
         }
     })
